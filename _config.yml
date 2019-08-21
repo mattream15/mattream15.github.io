@@ -1,11 +1,11 @@
 # Site settings
-author: Matthew Ream
-title: 
+author: Matthew T. Ream
+title: Matthew Ream
 header-img: img/home-bg.png
 email: matthewtimothyream@gmail.com
-copyright_name: Matthew Ream
+copyright_name: Matthew T. Ream
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Software Engineering
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  mattream15
