@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Completing My First Project: Minnesota Agriculture"
-date:       2019-09-19 19:00:18 +0000
+date:       2019-09-19 15:00:19 -0400
 permalink:  completing_my_first_project_minnesota_agriculture
 ---
 
