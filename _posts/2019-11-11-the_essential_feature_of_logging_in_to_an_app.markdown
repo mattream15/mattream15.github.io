@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "The Essential Feature of Logging In to an App"
-date:       2019-11-11 22:45:20 +0000
+date:       2019-11-11 17:45:21 -0500
 permalink:  the_essential_feature_of_logging_in_to_an_app
 ---
 
