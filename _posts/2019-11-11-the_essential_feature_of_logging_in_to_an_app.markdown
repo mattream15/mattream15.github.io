@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "The Essential Feature of Logging In to an App"
+title:      "The Essential Feature of Logging In and Out of an App"
 date:       2019-11-11 17:45:21 -0500
 permalink:  the_essential_feature_of_logging_in_to_an_app
 ---
@@ -21,7 +21,9 @@ The login form will use a "POST" request within its method to send the user's in
 
 Note: Some may assume that "user" should be made into an instance variable; however, this is unnecessary because the "user" will be redirected to "/users/#{user.id}" upon the successful act of logging in to the application and thus does not require the capabilities of an instance variable.
 
-If the user has been successfully authenticated by 'bcrypt', the session[:user_id] is set equal to the user.id and the user is redirected to the "GET" method for its specific show page inside of the UsersController, via 'redirect "/users/#{user.id}"'. On the other hand, if the conditions have not been met, the "sessions/login" view will be rendered once again.
+If the user has been successfully authenticated by 'bcrypt', the session[:user_id] is set equal to the user.id and the user is redirected to the "GET" method for its specific show page inside of the UsersController via 'redirect "/users/#{user.id}"'. On the other hand, if the conditions as specified by the if statment have not been met, the "sessions/login" view will be rendered once again.
+
+Note: It is essential that the session[:user_id] is set equal to user.id, a unique value, as it gives the app the ability to determine whether a specific user is logged in or not. Later on, this will also give the user the opportunity to logout within the SessionsController by simply clearing the session hash as a part of the "GET 'logout' method. Since the hash is used for the temporary storage of information on the server side, it is efficient and effective for the app to clear the session hash when a user logs out, rendering the "sessions/login" view. When user chooses to log back in, the session[:user_id] will once again be set equal to the user.id for the duration of time that they are logged in to the app.
 
 Once the user has been directed to the "GET" method for its respective show page in the UsersController, an instance variable of @user is set equal to the specific user that is found by id through "User.find_by_id(params[:id])". Upon successfully setting @user equal to the specific user that was matched through id, the "users/show" page is rendered for that user, displaying the provided information within the view file.
 
